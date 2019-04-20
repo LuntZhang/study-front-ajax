@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <script type="text/javascript">
+        //定义一个函数,通过该函数来异步获取信息
+        function Ajax() {
+            //1.声明一个空对象来装入XMLHttpRequest对象
+            var xmlHttpReq = null;
+            //2.给XMLHttpRequest对象赋值
+            if (window.ActiveXObject) {
+                //IE5,IE6是以ActivexObject的方式引用XMLHttpRequest对象
+                xmlHttpReq = new ActiveXObject("Microsoft.XMLHTTP");
+            } else if (window.XMLHttpRequest) {
+                //除IE5,IE6以外的浏览器 XMLHttpRequest是Window的子对象
+                xmlHttpReq = new XMLHttpRequest();
+            }
+            if (xmlHttpReq != null) {
+                //3.实例化成功后，使用open()方法初始化XMLHttpRequest对象,
+                //指定http方法和要使用的服务器URL
+                xmlHttpReq.open("GET", "HandlerOne.ashx", true);
+                //4.回调函数
+                //当readyState值改变时，会激发一个readystateChange事件,
+                //可以使用onreadystatechange属性来注册该回调事件处理器
+                xmlHttpReq.onreadystatechange = RequestCallBack;
+                //5.使用send()方法发送请求,因为这个请求使用的是HTTP的Get方式,所以可以在不指定参数或使用NULL参数的情况下调用send方法
+                xmlHttpReq.send(null);
+            }
+
+            function RequestCallBack() {
+                if (xmlHttpReq.readyState == 4) {
+                    //当前请求完成加载
+                    if(xmlHttpReq.status ==200){
+                        //响应已经成功
+                        document.getElementById("regText").innerHTML = xmlHttpReq.responseText;
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <input type="button" value="ajax提交" onclick="Ajax();" />
+    <div id="regText"></div>
+</body>
+</html>

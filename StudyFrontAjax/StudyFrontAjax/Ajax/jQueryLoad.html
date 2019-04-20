@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+	<meta charset="utf-8" />
+
+    <style type="text/css">
+        #regText {
+            width: 500px;
+            height: 500px;
+            border: 1px solid red;
+        }
+    </style>
+
+    <script src="../js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            //1.0载入HTML文档
+            //$("#send").click(function () {
+            //    $("#regText").load("Test.html");
+            //});
+            //2.0筛选载入的HTML文档
+            //$("#send").click(function () {
+            //    $("#regText").load("Test.html div");
+            //});
+            //3.0 传递数据方式
+            //post方式
+            //$("#send").click(function () {
+            //    $("#regText").load("HandlerTwo.ashx", { id: "1" });
+            //});
+            //get方式
+            // $("#send").click(function () {
+            //    $("#regText").load("HandlerTwo.ashx?id=1", null);
+            //}
+            //4.0回调参数
+            $("#send").click(function () {
+                $("#regText").load("HandlerTwo.ashx", { id: "1" }, function (a, b, c) {
+                    alert(a);
+                    alert(b);
+                    alert(c);
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <input type="button" id="send" value="ajaxLoad" />
+    <div id="regText"></div>
+</body>
+</html>
