@@ -17,17 +17,30 @@
             //    });
             //});  
 
+            //$("#send").click(function () {
+            //    $.get("HandlerGet2.ashx", {
+            //        userName: $("#tbUserName").val(),
+            //        content: $("#ttContent").val()
+            //    }, function (data, status) {
+            //        // 返回xml文档
+            //        var userName = $(data).find("user").attr("userName");
+            //        var cotnt = $(data).find("user cotent").text();
+            //        var strHtml = "<div><h6>" + userName + "</h6></div><div><p>" + cotnt + "</p></div>";
+            //        $("#rgText").html(strHtml);
+            //    });
+            //});
+
             $("#send").click(function () {
-                $.get("HandlerGet2.ashx", {
+                $.get("HandlerGet3.ashx", {
                     userName: $("#tbUserName").val(),
                     content: $("#ttContent").val()
                 }, function (data, status) {
-                    // 返回xml文档
-                    var userName = $(data).find("user").attr("userName");
-                    var cotnt = $(data).find("user cotent").text();
+                    // 返回Json数据格式
+                    var userName = data.UserName;
+                    var cotnt = data.Content;
                     var strHtml = "<div><h6>" + userName + "</h6></div><div><p>" + cotnt + "</p></div>";
                     $("#rgText").html(strHtml);
-                });
+                },"json");
             });
 
         });
