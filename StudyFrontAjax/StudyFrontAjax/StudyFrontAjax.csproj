@@ -97,6 +97,21 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Plugin\9-1-1.html" />
+    <Content Include="Plugin\9-1-2.html" />
+    <Content Include="Plugin\9-1-3.html" />
+    <Content Include="Plugin\9-1-4.html" />
+    <Content Include="Plugin\9-1-5.html" />
+    <Content Include="Plugin\9-1-6.html" />
+    <Content Include="Plugin\9-1-7.html" />
+    <Content Include="Plugin\9-1-8.html" />
+    <Content Include="Plugin\images\checked.gif" />
+    <Content Include="Plugin\images\loading.gif" />
+    <Content Include="Plugin\images\unchecked.gif" />
+    <Content Include="Plugin\lib\jQuery.FormValidate.js" />
+    <Content Include="Plugin\lib\jquery.metadata.js" />
+    <Content Include="Plugin\lib\jquery.validate.js" />
+    <Content Include="Plugin\lib\jquery.validate.messages_cn.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -118,6 +133,7 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
