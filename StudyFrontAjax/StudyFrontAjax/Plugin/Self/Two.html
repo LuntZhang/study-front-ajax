@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <script src="../../js/jquery-1.11.0.js"></script>
+    <script type="text/javascript">
+        //插件编写
+        ;(function ($) {
+            $.fn.extend({
+                "color":function (value) {
+                    if (value == undefined) {
+                        return this.css("color");
+                    }
+                    else {
+                        return this.css("color",value);
+                    }
+                }
+            });
+        })(jQuery);
+
+        //插件的应用
+        $(document).ready(function () {
+            //查看第一个div的color样式式值
+            alert($("div").color());
+            //把所有的div的字体颜色都设为红色
+            alert($("div").color("red"));
+
+        });
+    </script>
+</head>
+<body>
+    <div style="color:blue">蓝色</div>
+    <div style="color:green">绿色</div>
+    <div style="color:yellow">黄色</div>
+</body>
+</html>

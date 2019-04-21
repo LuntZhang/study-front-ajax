@@ -114,6 +114,12 @@
     <Content Include="Plugin\Form\demo8.html" />
     <Content Include="Plugin\Form\index.html" />
     <Content Include="Plugin\Form\lib\jquery.form.js" />
+    <Content Include="Plugin\Self\Five.html" />
+    <Content Include="Plugin\Self\Four.html" />
+    <Content Include="Plugin\Self\One.html" />
+    <Content Include="Plugin\Self\Six.html" />
+    <Content Include="Plugin\Self\Three.html" />
+    <Content Include="Plugin\Self\Two.html" />
     <Content Include="Plugin\Validation\9-1-1.html" />
     <Content Include="Plugin\Validation\9-1-2.html" />
     <Content Include="Plugin\Validation\9-1-3.html" />

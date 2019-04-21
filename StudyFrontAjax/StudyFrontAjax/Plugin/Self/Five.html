@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <script src="../../js/jquery-1.11.0.js"></script>
+    <script type="text/javascript">
+        //插件编写
+        ; (function ($) {
+            $.extend({
+                ltrim: function (text) {
+                    return (text||"").replace(/^\s+/g, "");
+
+                },
+                rtrim: function (text) {
+                    return (text || "").replace(/\s+$/g,"");
+                }
+            });
+        })(jQuery);
+        //插件的应用
+        $(document).ready(function () {
+            $("#trimTest").val(
+                   $.trim("     test    ")+"241\n"+
+                   $.ltrim("     test    ") + "123123\n"+
+                   $.rtrim("     test    ")+"23423" 
+                );
+        });
+    </script>
+</head>
+<body>
+    <textarea id="trimTest" rows="5" cols="20"></textarea>
+</body>
+</html>
