@@ -37,3 +37,4 @@ E:\Front_Project\study-front-ajax\StudyFrontAjax\StudyFrontAjax\bin\Microsoft.Co
 E:\Front_Project\study-front-ajax\StudyFrontAjax\StudyFrontAjax\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 E:\Front_Project\study-front-ajax\StudyFrontAjax\StudyFrontAjax\obj\Debug\StudyFrontAjax.dll
 E:\Front_Project\study-front-ajax\StudyFrontAjax\StudyFrontAjax\obj\Debug\StudyFrontAjax.pdb
+E:\Front_Project\study-front-ajax\StudyFrontAjax\StudyFrontAjax\obj\Debug\StudyFrontAjax.csprojResolveAssemblyReference.cache

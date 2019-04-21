@@ -16,11 +16,11 @@ namespace StudyFrontAjax.Ajax.GetAndPost
         {
             string userName, content;
             // get请求
-            //userName = context.Request.QueryString["userName"];
-            //content = context.Request.QueryString["content"];
+            userName = context.Request.QueryString["userName"];
+            content = context.Request.QueryString["content"];
             // post请求
-            userName = context.Request.Form["userName"];
-            content = context.Request.Form["content"];
+            //userName = context.Request.Form["userName"];
+            //content = context.Request.Form["content"];
 
             PingLun pl = new PingLun { Content = content, UserName = userName, Remark = "无" };
             // 序列化成Json格式

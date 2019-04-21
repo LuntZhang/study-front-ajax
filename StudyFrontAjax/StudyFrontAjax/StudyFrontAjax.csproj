@@ -73,6 +73,8 @@
     <Content Include="Ajax\AjaxCore.html" />
     <Content Include="Ajax\GetAndPost\jQueryGet1.html" />
     <Content Include="Ajax\GetAndPost\XMLFile1.xml" />
+    <Content Include="Ajax\getScriptANDgetJson\getScript1.html" />
+    <Content Include="Ajax\getScriptANDgetJson\JavaScript1.js" />
     <Content Include="Ajax\jQueryLoad.html" />
     <Content Include="Ajax\Test.html" />
     <Content Include="js\demo.js" />
