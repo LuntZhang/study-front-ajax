@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+	<meta charset="utf-8" />
+    <script src="../../js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#send").click(function () {
+                $.get("HandlerGet1.ashx", {
+                    userName: $("#tbUserName").val(),
+                    content: $("#ttContent").val()
+                }, function (data, status) {
+                    $("#rgText").html(data);
+                });
+            });  
+        });
+    </script>
+</head>
+<body>
+    <div id="Div1">加载中...</div>
+    <form id="form1" action="#">
+        <input type="button" value="序列化" id="btnSer" />
+        <p>评论</p>
+        <p>
+            姓名:
+            <input type="text" name="userName" id="tbUserName" />
+        </p>
+        <p>
+            内容:
+            <textarea rows="5" cols="10" name="content" id="ttContent"></textarea>
+        </p>
+        <p>
+            <input type="button" id="send" value="提交" />
+        </p>
+        <p>显示评论信息</p>
+        <div id="rgText"></div>
+    </form>
+
+    <div id="resText2"></div>
+</body>
+</html>
