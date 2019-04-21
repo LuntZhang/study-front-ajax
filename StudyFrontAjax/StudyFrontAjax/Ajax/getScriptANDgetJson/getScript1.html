@@ -8,8 +8,13 @@
     <script type="text/javascript">
         $(function () {
             $("#send").click(function () {
-                $.getScript("JavaScript1.js", function () {
-                    alert("成功加载js文件");
+                //$.getScript("JavaScript1.js", function () {
+                //    alert("成功加载js文件");
+                //});
+                $.ajax({
+                    type: "GET",
+                    url: "JavaScript1.js",
+                    dataType: "script"
                 });
             });
         });

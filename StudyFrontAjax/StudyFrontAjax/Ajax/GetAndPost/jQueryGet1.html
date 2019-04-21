@@ -1,9 +1,9 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title></title>
-	<meta charset="utf-8" />
+    <meta charset="utf-8" />
     <script src="../../js/jquery-1.11.0.min.js"></script>
     <script type="text/javascript">
         $(document).ready(function () {
@@ -15,7 +15,7 @@
             //        // 返回html文档
             //        $("#rgText").html(data);
             //    });
-            //});  
+            //});
 
             //$("#send").click(function () {
             //    $.get("HandlerGet2.ashx", {
@@ -58,21 +58,41 @@
             //});
 
             // getJson()
-            $("#send").click(function () {
-                $.getJSON("HandlerGet3.ashx", {
-                    userName: $("#tbUserName").val(),
-                    content: $("#ttContent").val()
-                }, function (data, status) {
-                    // 返回Json数据格式
-                    var userName = data.UserName;
-                    var cotnt = data.Content;
-                    var strHtml = "<div><h6>" + userName + "</h6></div><div><p>" + cotnt + "</p></div>";
-                    $("#rgText").html(strHtml);
-                });
-            });
+            //$("#send").click(function () {
+            //    $.getJSON("HandlerGet3.ashx", {
+            //        userName: $("#tbUserName").val(),
+            //        content: $("#ttContent").val()
+            //    }, function (data, status) {
+            //        // 返回Json数据格式
+            //        var userName = data.UserName;
+            //        var cotnt = data.Content;
+            //        var strHtml = "<div><h6>" + userName + "</h6></div><div><p>" + cotnt + "</p></div>";
+            //        $("#rgText").html(strHtml);
+            //    });
+            //});
 
+            // ajax()
+            $("#send").click(function () {
+                $.ajax({
+                    type: "GET",
+                    url: "HandlerGet3.ashx",
+                    data:  {
+                        userName: $("#tbUserName").val(),
+                        content: $("#ttContent").val()
+                    },
+                    dataType: "json",
+                    success: function (data, status) {
+                        var userName = data.UserName;
+                        var cotnt = data.Content;
+                        var strHtml = "<div><h6>" + userName + "</h6></div><div><p>" + cotnt + "</p></div>";
+                        $("#rgText").html(strHtml);
+                    }
+                });
+              
+
+            });
         });
-    </script> 
+    </script>
 </head>
 <body>
     <div id="Div1">加载中...</div>
