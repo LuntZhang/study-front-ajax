@@ -76,6 +76,7 @@
     <Content Include="Ajax\getScriptANDgetJson\getScript1.html" />
     <Content Include="Ajax\getScriptANDgetJson\JavaScript1.js" />
     <Content Include="Ajax\jQueryLoad.html" />
+    <Content Include="Ajax\serialize\serialize.html" />
     <Content Include="Ajax\Test.html" />
     <Content Include="js\demo.js" />
     <Content Include="js\demo.min.js" />

@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+	<meta charset="utf-8" />
+    <script src="../../js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $("#btnSer").click(function () {
+                //console.log($("#form1").serialize());
+                $("div").text($("#form1").serialize());
+            });
+        });
+    </script>
+</head>
+<body>
+    <form id="form1">
+        <input type="button" name="btnTijiao" id="btnTj" value="提交" />
+        <input type="text" name="txtEmpty" id="txtET" value="我是空的" />
+        <input type="button" id="btnSer" value="序列化" />
+    </form>
+    <div></div>
+</body>
+</html>

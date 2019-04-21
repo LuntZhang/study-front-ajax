@@ -88,7 +88,14 @@
                         $("#rgText").html(strHtml);
                     }
                 });
-              
+                // 序列化
+                $("#btnSer").click(function () {
+                    console.log($("#form1").serialize());
+                    console.log($("#form1").serializeArray());
+                    var obj = { a: 1, b: 2, c: 3 };
+                    var k = $.param(obj);
+                    console.log(k);
+                });
 
             });
         });
