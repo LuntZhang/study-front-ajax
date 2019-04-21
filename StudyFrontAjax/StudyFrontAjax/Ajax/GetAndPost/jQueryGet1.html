@@ -7,16 +7,31 @@
     <script src="../../js/jquery-1.11.0.min.js"></script>
     <script type="text/javascript">
         $(document).ready(function () {
+            //$("#send").click(function () {
+            //    $.get("HandlerGet1.ashx", {
+            //        userName: $("#tbUserName").val(),
+            //        content: $("#ttContent").val()
+            //    }, function (data, status) {
+            //        // 返回html文档
+            //        $("#rgText").html(data);
+            //    });
+            //});  
+
             $("#send").click(function () {
-                $.get("HandlerGet1.ashx", {
+                $.get("HandlerGet2.ashx", {
                     userName: $("#tbUserName").val(),
                     content: $("#ttContent").val()
                 }, function (data, status) {
-                    $("#rgText").html(data);
+                    // 返回xml文档
+                    var userName = $(data).find("user").attr("userName");
+                    var cotnt = $(data).find("user cotent").text();
+                    var strHtml = "<div><h6>" + userName + "</h6></div><div><p>" + cotnt + "</p></div>";
+                    $("#rgText").html(strHtml);
                 });
-            });  
+            });
+
         });
-    </script>
+    </script> 
 </head>
 <body>
     <div id="Div1">加载中...</div>

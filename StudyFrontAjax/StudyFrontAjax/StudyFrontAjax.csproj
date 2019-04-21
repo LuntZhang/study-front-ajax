@@ -68,6 +68,7 @@
   <ItemGroup>
     <Content Include="Ajax\AjaxCore.html" />
     <Content Include="Ajax\GetAndPost\jQueryGet1.html" />
+    <Content Include="Ajax\GetAndPost\XMLFile1.xml" />
     <Content Include="Ajax\jQueryLoad.html" />
     <Content Include="Ajax\Test.html" />
     <Content Include="js\demo.js" />
@@ -79,6 +80,7 @@
     <Content Include="Ajax\HandlerOne.ashx" />
     <Content Include="Ajax\HandlerTwo.ashx" />
     <Content Include="Ajax\GetAndPost\HandlerGet1.ashx" />
+    <Content Include="Ajax\GetAndPost\HandlerGet2.ashx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -92,6 +94,9 @@
   <ItemGroup>
     <Compile Include="Ajax\GetAndPost\HandlerGet1.ashx.cs">
       <DependentUpon>HandlerGet1.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Ajax\GetAndPost\HandlerGet2.ashx.cs">
+      <DependentUpon>HandlerGet2.ashx</DependentUpon>
     </Compile>
     <Compile Include="Ajax\HandlerOne.ashx.cs">
       <DependentUpon>HandlerOne.ashx</DependentUpon>
