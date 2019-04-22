@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <script src="../js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var top_100_list = ["23213", "2132123", "...."];
+            var $myList = $("#myList");
+            var top_100_li = "";
+            var newArray = [];
+            for (var i = 0, l = top_100_list.length; i < l; i++)
+            {
+               
+                newArray[i]= "<li>" + top_100_list[i] + "</li>";
+            }
+            $myList.html(newArray.join(" "));
+        });
+    </script>
+</head>
+<body>
+    <ul id="myList">
+        <li></li>
+    </ul>
+</body>
+</html>

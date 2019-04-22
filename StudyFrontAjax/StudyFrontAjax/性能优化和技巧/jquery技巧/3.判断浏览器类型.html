@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title></title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="text/javascript" src="../../js/jquery.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+$(document).ready(function() {  
+	// Firefox 2 and above  
+	if ($.browser.mozilla && $.browser.version >= "1.8" ){  
+	    // do something  
+	    alert("Firefox 2 and above  ");
+	}    
+	// Safari  
+	if( $.browser.safari ){  
+	    // do something  
+	    alert("Safari");
+	}    
+	// Chrome  
+	if( $.browser.chrome){  
+	    // do something  
+	    alert("Chrome");
+	}    
+	// Opera  
+	if( $.browser.opera){  
+	    // do something  
+	    alert("Opera");
+	}    
+	// IE6 and below  
+	if ($.browser.msie && $.browser.version <= 6 ){  
+	  
+	    alert("IE6 and below ");
+	}    
+	// anything above IE6  
+	if ($.browser.msie && $.browser.version > 6){  
+	    alert("anything above IE6 ")
+	   
+	}  
+});
+</script>
+</body>
+</html>
